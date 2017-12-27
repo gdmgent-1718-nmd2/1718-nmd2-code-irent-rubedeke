@@ -1,5 +1,48 @@
-<nav class="navbar fixed-bottom navbar-light bg-light">
-{%- if site.show-style-guide %}
-    <a href="{{ site.baseurl }}{% link style-guide/index.md %}" class="btn">Style Guide</a>
-{%- endif %}
-</nav>
+<footer class="navbar navbar-light bg-light navbod footer">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-4 text-center">
+                <p class="blue">About Us</p>
+                <div class="stroke"></div>
+                <img src="{{ site.baseurl }}/img/ir_logo.png" alt="ir_logo" width="10%" class="mx-auto d-block">
+                <i class="fa fa-facebook-square footerico" style="font-size:36px"></i>
+                <i class="fa fa-twitter-square" style="font-size:36px"></i>
+                <i class="fa fa-pinterest-square" style="font-size:36px"></i>
+                <i class="fa fa-instagram" style="font-size:36px"></i>
+            </div>
+            <div class="col-12 col-md-4">
+                <P class="blue">Information</P>
+                <div class="stroke"></div>
+                <p>
+                    <a href="{{ site.baseurl }}/contact.html">Contact</a>
+                    <br>
+                    <a href="{{ site.baseurl }}/detailpagina/checkout/voorwaarden.html">Disclaimer</a>
+                    <br>
+                    <a href="{{ site.baseurl }}/termsandconditions.html">Terms and Condition</a>
+                    <br>
+                    <a href="{{ site.baseurl }}/detailpagina/checkout/voorwaarden.html">Payments and Returns</a>
+                </p>
+            </div>
+            <div class="col-12 col-md-4">
+                <p class="blue">Subscribe</p>
+                <div class="stroke"></div>
+
+                <form>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="e-mail address">
+                    </div>
+                </form>
+
+                <a class="col-12 btn btn-outline-dark" href="#">send us</a>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <p>Copyright © 2017
+                <br> Designed by Manon Adriaens and Ruben De Keersmaecker</p>
+        </div>
+    </div>
+
+</footer>

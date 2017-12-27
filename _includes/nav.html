@@ -1,0 +1,43 @@
+{%- assign nodes = site.pages | where: 'layout', 'default' | sort: 'title' %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbod">
+    <!-- websitelogo -->
+    <a class="navbar-brand" href="{{ site.baseurl }}/index.html">
+        <img src="{{ site.baseurl }}/img/ir_logo.png" alt="iR_logo" width="50px">
+    </a>
+
+    <!-- hamburger icoon -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- hoofdnavigatie -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto navfont">
+            {% assign links = site.data.navigation %} {% for link in links %} {% assign class = nil %} {% if link.url contains page.url
+            %} {% assign class = ' active' %} {% endif %} {% if link.sublinks %}
+            <li class="nav-item dropdown {{ class }}">
+                <a href="{{ site.baseurl }}{{ link.url }}" class="nav-link dropdown-toggle {{ class }}" data-toggle="dropdown" role="button"
+                    aria-haspopup="true" aria-expanded="false">{{ link.title }}
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    {% for sublink in link.sublinks %}
+                    <li class="dropdown-item">
+                        <a class="nav-link{{ class }}" href="{{ site.baseurl }}{{ sublink.url }}">{{ sublink.title }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% else %}
+            <li class="nav-item{{ class }}">
+                <a class="nav-link{{ class }}" href="{{ site.baseurl }}{{ link.url }}">{{ link.title }}</a>
+            </li>
+            {% endif %} {% endfor %}
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="navfont form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="navfont btn btn-outline-dark my-2 my-sm-0 mx-auto" type="submit">Search</button>
+        </form>
+    </div>
+</nav>

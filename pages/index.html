@@ -3,11 +3,77 @@ layout   : default
 permalink: /
 # Custom Page Variables
 # ─────────────────────
-title: Bootstrap 4 &mdash; Voorbeeld
+title: Home
 ---
-<div class="jumbotron">
-    <h1 class="display-3">{{ page.title }}</h1>
-</div>
 <div class="container">
-    <a class="btn btn-primary" href="http://getbootstrap.com/docs/4.0/getting-started/introduction/">Bootstrap 4 documentation</a>
+
+  <!--Head-->
+  <div class="row">
+    <div class="col-12 col-sm-4 deal">
+      <h4 class="tright">CRAZY DEAL</h4>
+      <h1 class="blue text-right">25%</h1>
+      <h4 class="blue text-right">Discount</h4>
+      <a class="col-12 col-md-8 btn btn-outline-dark dealbut" href="{{ site.baseurl }}/detailpagina/product.html">Get the offer on time</a>
+      <a class="col-12 col-md-8 btn btn-outline-dark dealbut" href="{{ site.baseurl }}/detailpagina/product.html">More about the watch</a>
+    </div>
+
+    <div class="col-12 col-sm-4 spacebetween">
+      <img src="{{ site.baseurl }}/img/home_gear_s_b.png" alt="Gear met zwart bandje" width="100%">
+    </div>
+
+    <div class="col-12 col-sm-4 deal">
+      <h1 class="bold text-left nomarg">Be on time</h1>
+      <h4 class="text-left">and rent this Gear watch</h4>
+    </div>
+  </div>
+  <!--Einde Head-->
+
+  <div class="spacebetween">
+    <h3 class="bold">Turn heads with your wrist</h1>
+      <p>Choose from new styles and colours.</p>
+      <img src="{{ site.baseurl }}/img/wrist_7.jpg" alt="wrist_7" class="spacebetween" width="100%">
+  </div>
+
+  <div class="spacebetween">
+    <h3 class="bold">Make calls and send texts with just your watch</h1>
+      <p>You want to wear a fancy costume or dress but don’t have the space for your phone? Wear the Gear S! Answer any call
+        or text with just your watch. </p>
+      <img src="{{ site.baseurl }}/img/wrist_1.jpg" alt="wrist_1" class="spacebetween" width="100%">
+  </div>
+
+  <div class="spacebetween">
+    <h3 class="bold">Revolutionary style</h1>
+      <p>The Samsung Gear S smart watch has an elegant curved Super AMOLED display for a comfortable fit. Express your style
+        with changeable straps and screen clocks. See info and alerts on a beautiful, easy-to-use interface.</p>
+      <img src="{{ site.baseurl }}/img/wrist_3.jpg" alt="wrist_3" class="spacebetween" width="100%">
+
+  </div>
+
+  <div class="spacebetween">
+    <h3 class="bold">Straps to match your every mood</h1>
+      <p>Choose your bracelet</p>
+
+      <div class="row spacebetween justify-content-center">
+        <div class="card col-6 col-md-4">
+          <img class="card-img-top" src="{{ site.baseurl }}/img/gear_s_w.jpg" alt="Gear met wit bandje">
+          <a href="{{ site.baseurl }}/detailpagina/product.html">
+            <div class="card-body navbod">
+              <p class="card-text">White Bracelet</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="card col-6 col-md-4">
+          <img class="card-img-top" src="{{ site.baseurl }}/img/gear_s_b.jpg" alt="Gear met zwart bandje">
+          <a href="#">
+            <div class="card-body navbod">
+              <p class="card-text">Black Bracelet</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+  </div>
+
+
 </div>
